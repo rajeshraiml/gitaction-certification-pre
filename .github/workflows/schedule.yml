@@ -1,12 +1,11 @@
 name: schedule example
 on:
     schedule:
-        - cron: 1 * * * *
+        - cron: 10 * * * *
 jobs:
     build:
-        name: "Build Job"
         runs-on: ubuntu-latest
         steps:
-          - name: "Step 1"
+          - name: "schedule 1"
             run: echo "Schedule job is triggered !!!"
     
