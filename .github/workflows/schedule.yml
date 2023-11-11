@@ -1,7 +1,7 @@
 name: schedule example
 on:
     schedule:
-        - cron: 10 * * * *
+        - cron: 1 * * * *
 jobs:
     build:
         runs-on: ubuntu-latest
