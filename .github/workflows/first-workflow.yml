@@ -9,3 +9,8 @@ jobs:
         run: echo "Hello welcome to Gitaction"
       - name: Print Bye
         run: echo "Bye !!"
+  second-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Second jobs
+        run: echo "Hello from second job"
