@@ -2,23 +2,36 @@ name: Container Action Workflow
 on: workflow_dispatch
 
 jobs:
-    container-job:
-      runs-on: ubuntu-latest
-      container: node:10.18-jessie
-      services:
-        postgres:
-          image: postgres
-      steps:
-        - name: Check out repository code
-          uses: actions/checkout@v3
-        - name: Install pg
-          run: npm install pg
-        
-        - name: Install dependencies
-          run: npm ci
+  runner-job:
+    runs-on: ubuntu-latest
+    container: node:10.18-jessie
+    services:      
+      postgres:
+        # Docker Hub image
+        image: postgres
+        # Provide the password for postgres
+        env:
+          POSTGRES_PASSWORD: postgres
+        # Set health checks to wait until postgres has started
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+        ports:
+          # Maps tcp port 5432 on service container to the host
+          - 5432:5432
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v3
+      - name: Install pg
+        run: npm install pg
+    
+      - name: Install dependencies
+        run: npm ci
 
-        - name: Connect to PostgreSQL
-          run: node client.js
-          env:
-            POSTGRES_HOST: 127.0.0.1
-            POSTGRES_PORT: 5432
+      - name: Connect to PostgreSQL
+        run: node client.js
+        env:
+          POSTGRES_HOST: localhost
+          POSTGRES_PORT: 5432
