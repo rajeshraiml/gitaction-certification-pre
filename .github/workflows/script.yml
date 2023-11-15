@@ -13,5 +13,7 @@ jobs:
         uses: actions/checkout@v4
        
       - name: Run script
-        run: hello
+        run: |
+         pwd
+         hello.cmd
 
