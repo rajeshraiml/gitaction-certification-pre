@@ -1,1 +1,0 @@
-Write-out("Script executed from Github actions !!!!!")
