@@ -14,4 +14,4 @@ jobs:
       - run: npm install -g bats
       - run: bats -v
       - name: Output github context object
-        run: echo ${{toJson(github)}}
+        run: echo ${{ toJson(github) }}
