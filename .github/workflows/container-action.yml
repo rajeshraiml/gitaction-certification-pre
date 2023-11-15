@@ -4,7 +4,8 @@ on: workflow_dispatch
 jobs:
   runner-job:
     runs-on: ubuntu-latest
-    container: alpine:3.17
+    container:
+        image: node16
     services:      
       postgres:        
         image: postgres        
