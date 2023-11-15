@@ -1,0 +1,17 @@
+name: Script Execution
+run-name: ${{ github.actor }} is learning GitHub Actions
+on: 
+    workflow_dispatch
+jobs:
+  check-bats-version:
+    runs-on: ubuntu-latest
+    defaults:
+        run:
+          working-directory: ./scripts
+    steps:
+      - name: Get code
+        uses: actions/checkout@v4
+       
+      - name: Run script
+        run: ./hello.ps1
+
