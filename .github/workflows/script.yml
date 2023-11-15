@@ -12,9 +12,8 @@ jobs:
       - name: Get code
         uses: actions/checkout@v4
        
-      - name: Run script
-        shell: cmd
+      - name: Run script        
         run: |
          pwd
-         hello.CMD
+         hello.sh
 
