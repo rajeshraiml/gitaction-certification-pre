@@ -15,5 +15,5 @@ jobs:
       - name: Run script
         run: |
          pwd
-         ./hello.cmd
+         .\hello.cmd
 
