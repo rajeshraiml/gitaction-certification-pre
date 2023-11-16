@@ -1,5 +1,5 @@
 name: Github Issue Created
-run-name: ${{ github.actor }} is learning GitHub Actions - Script Execution
+run-name: ${{ github.actor }} is learning GitHub Actions - Github Issue Created Event
 
 on:
     issues:
