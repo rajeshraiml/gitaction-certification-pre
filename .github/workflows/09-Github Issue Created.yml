@@ -1,6 +1,5 @@
 name: 09-Github Issue Created
 run-name: ${{ github.actor }} is learning GitHub Actions - Github Issue Created Event
-
 on:
     issues:
       types:
