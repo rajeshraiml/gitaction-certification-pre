@@ -1,4 +1,4 @@
-name: Container Action Workflow
+name: 05-Container Action Example
 on: workflow_dispatch
 
 jobs:

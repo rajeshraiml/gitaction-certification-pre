@@ -1,4 +1,4 @@
-name: Cache dependencies
+name: 07-Cache dependencies example
 on: workflow_dispatch
 
 jobs:

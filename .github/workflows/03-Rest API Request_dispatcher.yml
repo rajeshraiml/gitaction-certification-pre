@@ -1,8 +1,7 @@
-name: Request_dispatcher example
+name: 03-Rest API Request_dispatcher
 on:
     repository_dispatch:
       types: [test_result]
-
 jobs:
   Build:   
     runs-on: ubuntu-latest

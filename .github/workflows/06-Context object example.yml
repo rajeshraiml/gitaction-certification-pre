@@ -1,4 +1,4 @@
-name: Context testing
+name: 06-Context object example
 on: push
 
 jobs:

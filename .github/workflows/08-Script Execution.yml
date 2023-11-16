@@ -1,4 +1,4 @@
-name: Script Execution
+name: 08-Script Execution
 run-name: ${{ github.actor }} is learning GitHub Actions - Script Execution
 on: 
     workflow_dispatch

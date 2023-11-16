@@ -1,4 +1,4 @@
-name: schedule example
+name: 04-schedule
 on:
   # schedule:
   #   - cron: '1 * * * *'
