@@ -1,5 +1,6 @@
 name: 06-Context object example
-on: push
+on: #push
+  workflow_dispatch:
 
 jobs:
   dump_contexts_to_log:
