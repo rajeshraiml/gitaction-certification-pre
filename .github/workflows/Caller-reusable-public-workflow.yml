@@ -9,6 +9,11 @@ jobs:
         config-path: /.github/workflows/configpath.txt
     secrets: 
         token: ${{secrets.GITHUB_TOKEN}}
+  job2:
+    needs: job1
+    runs-on: ubuntu-latest    
+    steps:
+      - run: echo ${{ needs.job1.outputs.firstword }} ${{ needs.job1.outputs.secondword }}
 
 
  
