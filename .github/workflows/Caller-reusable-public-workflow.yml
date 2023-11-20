@@ -4,7 +4,7 @@ on:
 
 jobs:
   job1:
-    uses: rajeshraiml/github-reusable/.github/workflows/reusable-sample.yml@mail
+    uses: rajeshraiml/github-reusable/.github/workflows/reusable-sample.yml@main
     with:
         config-path: /.github/workflows/configpath.txt
     secrets: 
