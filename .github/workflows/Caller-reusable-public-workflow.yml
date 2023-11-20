@@ -1,0 +1,14 @@
+name: Call a reusable workflow Public
+on:
+  workflow_dispatch:
+
+jobs:
+  job1:
+    uses: rajeshraiml/github-reusable/.github/workflows/reusable-sample.yml@mail
+    with:
+        config-path: /.github/workflows/configpath.txt
+    secrets: 
+        token: ${{secrets.GITHUB_TOKEN}}
+
+
+ 
