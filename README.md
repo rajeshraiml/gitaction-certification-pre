@@ -1,2 +1,2 @@
 # gitaction-certification-pre
-![01-Basic Workflow Example](https://github.com/github/docs/actions/workflows/01-BasicWorkflowExample.yml/badge.svg)
+![01-Basic Workflow Example](https://github.com/github/docs/actions/workflows/main.yml/badge.svg)
