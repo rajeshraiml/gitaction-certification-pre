@@ -20,9 +20,7 @@ jobs:
           pwd
           ls
           echo ${{github.workspace}}
-      - name: Read file
-        run:
-      # Commit and push all changed files.
+
       - name: GIT Commit Build Artifacts 
         run: |
           git config --global user.name "${{ env.CI_COMMIT_AUTHOR }}"
