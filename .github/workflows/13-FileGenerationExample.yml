@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest    
     steps:
       - name: create file
-        working-directory: scripts
+        working-directory: /scripts
         run: "echo hello world file >> sample.txt"
       - name: Check Dir
         run: |
