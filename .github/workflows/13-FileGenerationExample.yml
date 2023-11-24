@@ -9,7 +9,9 @@ jobs:
       - name: create file
         working-directory: scripts
         run: |
-         "echo hello world file >> sample.txt"
+         pwd
+         ls
+         #"echo hello world file >> sample.txt"
       - name: Check Dir
         run: |
           pwd
