@@ -4,8 +4,8 @@ on: workflow_dispatch
 jobs:
   runner-job:
     runs-on: ubuntu-latest
-    # container:
-    #     image: node16
+    container:
+        image: node16
     services:      
       postgres:        
         image: postgres        
