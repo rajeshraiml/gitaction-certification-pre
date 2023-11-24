@@ -3,7 +3,9 @@ on:
     workflow_dispatch: 
 jobs:
   file_create:
-
+    env: 
+      CI_COMMIT_MESSAGE: Continuous Integration Build Artifacts
+      CI_COMMIT_AUTHOR: Continuous Integration
     runs-on: ubuntu-latest    
     steps:
       - name: Check out repository
@@ -18,3 +20,10 @@ jobs:
           pwd
           ls
           echo ${{github.workspace}}
+      # Commit and push all changed files.
+      - name: GIT Commit Build Artifacts 
+        run: |
+          git config --global user.name "${{ env.CI_COMMIT_AUTHOR }}"
+          git config --global user.email "username@users.noreply.github.com"
+          git commit -a -m "${{ env.CI_COMMIT_MESSAGE }}"
+          git push
