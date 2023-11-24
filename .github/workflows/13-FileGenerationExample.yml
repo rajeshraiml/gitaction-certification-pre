@@ -6,12 +6,13 @@ jobs:
 
     runs-on: ubuntu-latest    
     steps:
+      - name: Check out repository
+        uses: actions/checkout@v3
+
       - name: create file
         working-directory: scripts
         run: |
-         pwd
-         ls
-         #"echo hello world file >> sample.txt"
+         "echo hello world file >> sample.txt"
       - name: Check Dir
         run: |
           pwd
